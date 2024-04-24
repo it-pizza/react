@@ -1,20 +1,27 @@
 import { Button } from "../../shared/index.ts";
+import { IStateControls } from "../../widgets/calculator/calculator.tsx";
 
-export function Keyboard() {
+export interface IState {
+    state: IStateControls
+    setState: Function
+}
+
+export function Keyboard(props: IState) {
     return (
         <div className="calculator__keyboard">
-            <Button value="1"/>
-            <Button value="2"/>
-            <Button value="3"/>
-            <Button value="4"/>
-            <Button value="5"/>
-            <Button value="6"/>
-            <Button value="7"/>
-            <Button value="8"/>
-            <Button value="9"/>
-            <Button value="-"/>
-            <Button value="0"/>
-            <Button value="+"/>
+            <Button value="1" state={props}/>
+            <Button value="2" state={props}/>
+            <Button value="3" state={props}/>
+            <Button value="4" state={props}/>
+            <Button value="5" state={props}/>
+            <Button value="6" state={props}/>
+            <Button value="7" state={props}/>
+            <Button value="8" state={props}/>
+            <Button value="9" state={props}/>
+            <Button value="-" state={props}/>
+            <Button value="0" state={props}/>
+            <Button value="+" state={props}/>
+            <Button value="=" state={props}/>
         </div>
     )
 }
