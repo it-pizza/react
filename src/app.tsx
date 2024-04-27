@@ -1,3 +1,21 @@
+function LargePost() {
+    return (
+        <div className="post large"></div>
+    )
+}
+
+function MediumPost() {
+    return (
+        <div className="post medium"></div>
+    )
+}
+
+function SmallPost() {
+    return (
+        <div className="post small"></div>
+    )
+}
+
 interface IPostData {
     id: number
     size: "large" | "medium" | "small"
@@ -5,11 +23,11 @@ interface IPostData {
 
 function Post(props: IPostData) {
     if (props.size === "large") {
-        return 
+        return LargePost()
     } else if (props.size === "medium") {
-        return 
+        return MediumPost()
     } else {
-        return
+        return SmallPost()
     }
 }
 
