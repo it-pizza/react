@@ -1,6 +1,6 @@
 function PostDate() {
     return (
-        <div className="post__date"></div>
+        <p className="post__date"></p>
     )
 }
 
@@ -10,11 +10,18 @@ function PostTitle() {
     )
 }
 
+function PostDescription() {
+    return (
+        <p className="post__description"></p>
+    )
+}
+
 function PostContent() {
     return (
         <div className="post__content">
             <PostDate/>
             <PostTitle/>
+            <PostDescription/>
         </div>
     )
 }
@@ -50,11 +57,11 @@ interface IPostData {
 
 function Post(props: IPostData) {
     if (props.size === "large") {
-        return LargePost()
+        return <LargePost/>
     } else if (props.size === "medium") {
-        return MediumPost()
+        return <MediumPost/>
     } else {
-        return SmallPost()
+        return <SmallPost/>
     }
 }
 
