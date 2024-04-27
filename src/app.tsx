@@ -1,3 +1,9 @@
+function PostImage() {
+    return (
+        <img src="#" className="post__img"></img>
+    )
+}
+
 function PostDate() {
     return (
         <p className="post__date"></p>
@@ -29,6 +35,7 @@ function PostContent() {
 function LargePost() {
     return (
         <div className="post large">
+            <PostImage/>
             <PostContent/>
         </div>
     )
@@ -37,6 +44,7 @@ function LargePost() {
 function MediumPost() {
     return (
         <div className="post medium">
+            <PostImage/>
             <PostContent/>
         </div>
     )
@@ -45,6 +53,7 @@ function MediumPost() {
 function SmallPost() {
     return (
         <div className="post small">
+            <PostImage/>
             <PostContent/>
         </div>
     )
