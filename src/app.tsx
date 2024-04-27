@@ -1,18 +1,28 @@
+function PostContent() {
+    return (<div className="post__content"></div>)
+}
+
 function LargePost() {
     return (
-        <div className="post large"></div>
+        <div className="post large">
+            <PostContent/>
+        </div>
     )
 }
 
 function MediumPost() {
     return (
-        <div className="post medium"></div>
+        <div className="post medium">
+            <PostContent/>
+        </div>
     )
 }
 
 function SmallPost() {
     return (
-        <div className="post small"></div>
+        <div className="post small">
+            <PostContent/>
+        </div>
     )
 }
 
