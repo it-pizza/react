@@ -4,10 +4,17 @@ function PostDate() {
     )
 }
 
+function PostTitle() {
+    return (
+        <h3 className="post__title"></h3>
+    )
+}
+
 function PostContent() {
     return (
         <div className="post__content">
             <PostDate/>
+            <PostTitle/>
         </div>
     )
 }
