@@ -32,11 +32,33 @@ function PostContent() {
     )
 }
 
+interface IPostControlButton {
+    className: string
+}
+
+function PostControlButton(props: IPostControlButton) {
+    return (
+        <button className={props.className}></button>
+    )
+}
+
+function PostControlPanel() {
+    return (
+        <div className="post__control-panel">
+            <PostControlButton className="post__control-button like"/>
+            <PostControlButton className="post__control-button dislike"/>
+            <PostControlButton className="post__control-button fix"/>
+            <PostControlButton className="post__control-button other"/>
+        </div>
+    )
+}
+
 function LargePost() {
     return (
         <div className="post large">
             <PostImage/>
             <PostContent/>
+            <PostControlPanel/>
         </div>
     )
 }
@@ -46,6 +68,7 @@ function MediumPost() {
         <div className="post medium">
             <PostImage/>
             <PostContent/>
+            <PostControlPanel/>
         </div>
     )
 }
@@ -55,6 +78,7 @@ function SmallPost() {
         <div className="post small">
             <PostImage/>
             <PostContent/>
+            <PostControlPanel/>
         </div>
     )
 }
