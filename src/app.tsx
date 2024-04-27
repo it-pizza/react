@@ -10,30 +10,42 @@ function PostImage(props: IPostImage) {
     )
 }
 
-function PostDate() {
+interface IPostDate {
+    date: string
+}
+
+function PostDate(props: IPostDate) {
     return (
-        <p className="post__date"></p>
+        <p className="post__date">{props.date}</p>
     )
 }
 
-function PostTitle() {
+interface IPostTitle {
+    title: string
+}
+
+function PostTitle(props: IPostTitle) {
     return (
-        <h3 className="post__title"></h3>
+        <h3 className="post__title">{props.title}</h3>
     )
 }
 
-function PostDescription() {
+interface IPostDescription {
+    description: string
+}
+
+function PostDescription(props: IPostDescription) {
     return (
-        <p className="post__description"></p>
+        <p className="post__description">{props.description}</p>
     )
 }
 
-function PostContent() {
+function PostContent(props: IPostAttribute) {
     return (
         <div className="post__content">
-            <PostDate/>
-            <PostTitle/>
-            <PostDescription/>
+            <PostDate date={props.data.date}/>
+            <PostTitle title={props.data.title}/>
+            <PostDescription description={props.data.text}/>
         </div>
     )
 }
@@ -68,7 +80,7 @@ function LargePost(props: IPostAttribute) {
     return (
         <div className="post large">
             <PostImage image={props.data.image}/>
-            <PostContent/>
+            <PostContent data={props.data}/>
             <PostControlPanel/>
         </div>
     )
@@ -79,7 +91,7 @@ function MediumPost(props: IPostAttribute) {
     return (
         <div className="post medium">
             <PostImage image={props.data.image}/>
-            <PostContent/>
+            <PostContent data={props.data}/>
             <PostControlPanel/>
         </div>
     )
@@ -90,7 +102,7 @@ function SmallPost(props: IPostAttribute) {
     return (
         <div className="post small">
             <PostImage image={props.data.image}/>
-            <PostContent/>
+            <PostContent data={props.data}/>
             <PostControlPanel/>
         </div>
     )
