@@ -1,5 +1,15 @@
+function PostDate() {
+    return (
+        <div className="post__date"></div>
+    )
+}
+
 function PostContent() {
-    return (<div className="post__content"></div>)
+    return (
+        <div className="post__content">
+            <PostDate/>
+        </div>
+    )
 }
 
 function LargePost() {
