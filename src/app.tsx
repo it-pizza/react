@@ -152,9 +152,11 @@ function Post(props: IPostData) {
 export function App() {
     return (
         <>
-            <Post size="large" id={10}/>
+            <Post size="large" id={80}/>
             <Post size="medium" id={10}/>
-            <Post size="small" id={10}/>
+            <Post size="medium" id={10}/>
+            <Post size="medium" id={10}/>
+            <Post size="medium" id={10}/>
         </>
     )
 }

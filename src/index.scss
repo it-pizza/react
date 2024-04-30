@@ -6,119 +6,90 @@
 
 #root {
     padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 280px);
+    gap: 20px;
 
     .post {
         background-color: #eeeeee;
         border-radius: 8px;
         padding: 12px;
         margin-bottom: 20px;
+
+        &__container {
+            overflow: hidden;
+            display: grid;
+            place-items: center;
+
+            &-image {
+                width: 100%;
+            }
+        }
+
+        &__content {
+            display: flex;
+            flex-direction: column;
+
+            & > .post__description {
+                overflow: auto;
+            }
+        }
+
+        &__control-panel {
+            display: flex;
+            align-items: center;
+
+            button {
+                width: 30px;
+                height: 30px;
+                margin-right: 10px;
+            }
+        }
+
+        &:first-child {
+            grid-column: 1 / 2;
+        }
+        &:nth-child(2) {
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+        }
+        &:nth-child(3) {
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+        }
+        &:nth-child(4) {
+            grid-column: 1 / 2;
+            grid-row: 3 / 4;
+        }
+        &:nth-child(5) {
+            grid-column: 2 / 3;
+            grid-row: 3 / 4;
+        }
     }
 
     .large {
-        width: 600px;
-        display: grid;
-        grid-template-columns: repeat(2, 2fr);
-        grid-template-rows: 180px 40px;
-
-        .post__container {
-            overflow: hidden;
-            grid-column: 2 / 3;
-            grid-row: 1 / 2;
-            display: grid;
-            place-items: center;
-
-            .post__container-image {
-                width: 260px;
-            }
-        }
-
-        .post__content {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .post__control-panel {
-            grid-column: 1 / 2;
-            display: flex;
-            align-items: center;
-            
-            button {
-                width: 30px;
-                height: 30px;
-                margin-right: 10px;
-            }
-        }
+        width: 570px;
+        grid-template-columns: 276px 290px;
+        grid-template-rows: 200px 50px;
     }
 
-    .medium {
+    .medium, .small {
         width: 270px;
-
-        .post__container {
-            overflow: hidden;
-            grid-column: 2 / 3;
-            grid-row: 1 / 2;
-            display: grid;
-            place-items: center;
-
-            .post__container-image {
-                width: 260px;
-            }
-        }
-
-        .post__content {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .post__control-panel {
-            grid-column: 1 / 2;
-            display: flex;
-            align-items: center;
-            
-            button {
-                width: 30px;
-                height: 30px;
-                margin-right: 10px;
-            }
-        }
     }
 
-    .small {
-        width: 270px;
-        display: grid;
-        grid-template-columns: 120px 120px;
-        grid-template-rows: 100px 40px;
+    .medium .post__container-image {
+        width: 260px;
+    }
 
-        .post__container {
-            overflow: hidden;
-            grid-column: 2 / 3;
-            grid-row: 1 / 2;
-            display: grid;
-            place-items: center;
+    .small .post__container-image {
+        width: 130px;
+    }
 
-            .post__container-image {
-                width: 130px;
-            }
-        }
+    .small .post__description {
+        display: none;
+    }
 
-        .post__content {
-            display: flex;
-            flex-direction: column;
-            .post__description {
-                display: none;
-            }
-        }
-
-        .post__control-panel {
-            grid-column: 1 / 2;
-            display: flex;
-            align-items: center;
-            
-            button {
-                width: 30px;
-                height: 30px;
-                margin-right: 10px;
-            }
-        }
+    .small .post__control-panel {
+        grid-column: 1;
     }
 }
