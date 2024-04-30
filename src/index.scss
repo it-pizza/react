@@ -8,11 +8,117 @@
     padding: 20px;
 
     .post {
-        display: grid;
-        grid-template-columns: repeat(2, 2fr);
-        grid-template-rows: repeat(2, 1fr);
         background-color: #eeeeee;
         border-radius: 8px;
         padding: 12px;
+        margin-bottom: 20px;
+    }
+
+    .large {
+        width: 600px;
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+        grid-template-rows: 180px 40px;
+
+        .post__container {
+            overflow: hidden;
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+            display: grid;
+            place-items: center;
+
+            .post__container-image {
+                width: 260px;
+            }
+        }
+
+        .post__content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .post__control-panel {
+            grid-column: 1 / 2;
+            display: flex;
+            align-items: center;
+            
+            button {
+                width: 30px;
+                height: 30px;
+                margin-right: 10px;
+            }
+        }
+    }
+
+    .medium {
+        width: 270px;
+
+        .post__container {
+            overflow: hidden;
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+            display: grid;
+            place-items: center;
+
+            .post__container-image {
+                width: 260px;
+            }
+        }
+
+        .post__content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .post__control-panel {
+            grid-column: 1 / 2;
+            display: flex;
+            align-items: center;
+            
+            button {
+                width: 30px;
+                height: 30px;
+                margin-right: 10px;
+            }
+        }
+    }
+
+    .small {
+        width: 270px;
+        display: grid;
+        grid-template-columns: 120px 120px;
+        grid-template-rows: 100px 40px;
+
+        .post__container {
+            overflow: hidden;
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+            display: grid;
+            place-items: center;
+
+            .post__container-image {
+                width: 130px;
+            }
+        }
+
+        .post__content {
+            display: flex;
+            flex-direction: column;
+            .post__description {
+                display: none;
+            }
+        }
+
+        .post__control-panel {
+            grid-column: 1 / 2;
+            display: flex;
+            align-items: center;
+            
+            button {
+                width: 30px;
+                height: 30px;
+                margin-right: 10px;
+            }
+        }
     }
 }

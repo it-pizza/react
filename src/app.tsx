@@ -6,7 +6,9 @@ interface IPostImage {
 
 function PostImage(props: IPostImage) {
     return (
-        <img src={props.image} className="post__img"></img>
+        <div className="post__container">
+            <img src={props.image} className="post__container-image"></img>
+        </div>
     )
 }
 
@@ -52,21 +54,22 @@ function PostContent(props: IPostAttribute) {
 
 interface IPostControlButton {
     className: string
+    content: string
 }
 
 function PostControlButton(props: IPostControlButton) {
     return (
-        <button className={props.className}></button>
+        <button className={props.className}>{props.content}</button>
     )
 }
 
 function PostControlPanel() {
     return (
         <div className="post__control-panel">
-            <PostControlButton className="post__control-button like"/>
-            <PostControlButton className="post__control-button dislike"/>
-            <PostControlButton className="post__control-button fix"/>
-            <PostControlButton className="post__control-button other"/>
+            <PostControlButton className="post__control-button like" content="👍"/>
+            <PostControlButton className="post__control-button dislike" content="👎🏻"/>
+            <PostControlButton className="post__control-button fix" content="🗳"/>
+            <PostControlButton className="post__control-button other" content="📄"/>
         </div>
     )
 }
@@ -147,5 +150,11 @@ function Post(props: IPostData) {
 }
 
 export function App() {
-    return (<Post size="large" id={10}/>)
+    return (
+        <>
+            <Post size="large" id={10}/>
+            <Post size="medium" id={10}/>
+            <Post size="small" id={10}/>
+        </>
+    )
 }
