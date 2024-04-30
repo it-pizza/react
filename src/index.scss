@@ -6,4 +6,13 @@
 
 #root {
     padding: 20px;
+
+    .post {
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+        grid-template-rows: repeat(2, 1fr);
+        background-color: #eeeeee;
+        border-radius: 8px;
+        padding: 12px;
+    }
 }
