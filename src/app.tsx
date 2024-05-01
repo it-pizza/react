@@ -1,5 +1,22 @@
 import { useEffect, useState } from "react"
 
+function Menu() {
+    return (
+        <nav className="header-burger">
+            <input type="checkbox" id="burger-checkbox" className="burger-checkbox"></input>
+        </nav>
+    )
+}
+
+function Header() {
+    return (
+        <header className="header">
+            <Menu />
+            <h2>Website - Homework</h2>
+        </header>
+    )
+}
+
 interface IPostImage {
     image: string
 }
@@ -152,11 +169,14 @@ function Post(props: IPostData) {
 export function App() {
     return (
         <>
-            <Post size="large" id={80}/>
-            <Post size="medium" id={10}/>
-            <Post size="medium" id={10}/>
-            <Post size="medium" id={10}/>
-            <Post size="medium" id={10}/>
+            <Header />
+            <div className="posts">
+                <Post size="large" id={80}/>
+                <Post size="medium" id={10}/>
+                <Post size="medium" id={10}/>
+                <Post size="medium" id={10}/>
+                <Post size="medium" id={10}/>
+            </div>
         </>
     )
 }
