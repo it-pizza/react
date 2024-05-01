@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+input {
+    padding: 3px;
+}
+
+button {
+    padding: 3px;
+}
+
+#root {
+    height: 100vh;
+}
+
+main {
+    height: 80%;
+}
+
+.header {
+    background: #0088ff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.burger-checkbox {
+    width: 30px;
+    height: 30px;
+}
+
+.signIn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.signIn__title {
+    margin-bottom: 10px;
+}
+
+.signIn__form {
+    display: grid;
+    gap: 7px;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
