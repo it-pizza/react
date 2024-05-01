@@ -18,7 +18,9 @@ function Header() {
 function Main() {
     return (
         <main>
-            
+            <section className="signIn">
+                <h1>sign in</h1>
+            </section>
         </main>
     )
 }
