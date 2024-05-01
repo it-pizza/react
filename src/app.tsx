@@ -170,13 +170,16 @@ export function App() {
     return (
         <>
             <Header />
-            <div className="posts">
-                <Post size="large" id={80}/>
-                <Post size="medium" id={10}/>
-                <Post size="medium" id={10}/>
-                <Post size="medium" id={10}/>
-                <Post size="medium" id={10}/>
-            </div>
+            <main>
+                <h1 className="post__title">posts</h1>
+                <div className="posts">
+                    <Post size="large" id={80}/>
+                    <Post size="medium" id={10}/>
+                    <Post size="medium" id={10}/>
+                    <Post size="medium" id={10}/>
+                    <Post size="medium" id={10}/>
+                </div>
+            </main>
         </>
     )
 }
