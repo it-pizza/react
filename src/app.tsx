@@ -15,10 +15,19 @@ function Header() {
     )
 }
 
+function Main() {
+    return (
+        <main>
+            
+        </main>
+    )
+}
+
 export function App() {
     return (
         <>
             <Header />
+            <Main />
         </>
     )
 }
