@@ -1,5 +1,6 @@
-export function Burger() {
+import './burger.scss'
 
+export function Burger() {
     return (
         <div className="header__burger">
             <input type="checkbox" id="header__burger-checkbox"></input>

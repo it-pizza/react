@@ -1,0 +1,47 @@
+@import '../../app/index.scss';
+
+.header__burger {
+    width: 45px;
+    height: 45px;
+    margin-right: 200px;
+
+    #header__burger-checkbox {
+        display: none;
+    }
+
+    .header__burger-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 45px;
+        height: 45px;
+        padding: 4px;
+        
+        %header__burger-line {
+            display: block;
+            height: 7px;
+            width: 40px;
+            background-color: $header-burger-line;
+            border-radius: 4px;
+        }
+
+        #header__burger-line {
+            @extend %header__burger-line;
+            position: relative;
+
+            &::before {
+                content: '';
+                @extend %header__burger-line;
+                position: absolute;
+                bottom: 10px;
+            }
+
+            &::after {
+                content: '';
+                @extend %header__burger-line;
+                position: absolute;
+                top: 10px;
+            }
+        }
+    }
+}

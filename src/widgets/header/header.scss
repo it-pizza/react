@@ -2,6 +2,7 @@
 
 .header {
     display: flex;
-    background-color: $header-background;
+    height: 45px;
     position: sticky;
+    background-color: $header-background;
 }
