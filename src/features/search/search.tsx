@@ -1,6 +1,6 @@
 function SearchForm() {
     return (
-        <form method="get" className="header__search">
+        <form method="get" className="header__search-form">
             <input type="text" placeholder="Search" className="header__search-input" />
         </form>
     )
@@ -17,9 +17,9 @@ function SearchButton() {
 
 export function Search() {
     return (
-        <>
+        <div className="header__search">
             <SearchForm />
             <SearchButton/>
-        </>
+        </div>
     )
 }
