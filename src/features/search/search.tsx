@@ -1,8 +1,11 @@
 function SearchForm() {
     return (
-        <form method="get" className="header__search-form">
-            <input type="text" placeholder="Search" className="header__search-input" />
-        </form>
+        <>
+            <form method="get" className="header__search-form">
+                <input type="text" placeholder="Search" className="header__search-input" />
+            </form>
+            <button type="button" className="header__search-hide"></button>
+        </>
     )
 }
 
