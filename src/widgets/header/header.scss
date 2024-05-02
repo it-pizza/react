@@ -1,0 +1,7 @@
+@import '../../app/index.scss';
+
+.header {
+    display: flex;
+    background-color: $header-background;
+    position: sticky;
+}
