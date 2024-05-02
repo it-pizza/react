@@ -3,7 +3,7 @@
 .header__burger {
     width: 45px;
     height: 45px;
-    margin-right: 200px;
+    margin-right: 200px; // временно
 
     #header__burger-checkbox {
         display: none;
@@ -15,7 +15,6 @@
         align-items: center;
         width: 45px;
         height: 45px;
-        padding: 4px;
         
         %header__burger-line {
             display: block;
