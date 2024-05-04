@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { fetchData } from "../../shared"
+import { fetchData } from "../../shared/index.ts"
 import { PostsFetchUrl } from "../../app/constants.ts"
 
 interface IPostFetchData {
@@ -30,7 +30,7 @@ function MediumPost(props: IPostData) {
     if (!props.data) {return}
     return (
         <div className="post-medium">
-        
+            <img src={props.data.image} alt="" />
         </div>
     )
 }
@@ -39,7 +39,7 @@ function SmallPost(props: IPostData) {
     if (!props.data) {return}
     return (
         <div className="post-small">
-        
+            <img src={props.data.image} alt="" />
         </div>
     )
 }
