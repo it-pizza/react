@@ -18,6 +18,10 @@
             ~ .header__burger-button #header__burger-line::after {
                 transform: translateY(-10px) rotate(-45deg);
             }
+
+            ~ .header__burger-menu {
+                transform: translateX(0);
+            }
         }
     }
 
@@ -54,6 +58,35 @@
                 position: absolute;
                 top: 10px;
             }
+        }
+    }
+
+    .header__burger-menu {
+        // Внешний вид
+        background-color: aliceblue;
+        border-right: 1px solid black;
+        padding: 10px;
+
+        // Размер
+        min-width: 200px;
+        height: calc(100vh - 45px);
+
+        // Расположение
+        position: absolute;
+
+        // Анимация
+        transform: translateX(-100%);
+        transition: 300ms;
+
+        .header__user {
+            justify-content: center;
+            align-items: center;
+        }
+
+        .header__burger-nav {
+            display: grid;
+            place-items: center;
+            padding: 20px;
         }
     }
 }

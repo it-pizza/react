@@ -4,6 +4,7 @@
     display: grid;
     grid-template-columns: 45px auto max-content;
     grid-template-rows: 45px;
+    gap: 5px;
     position: sticky;
     background-color: $header-background;
 }
