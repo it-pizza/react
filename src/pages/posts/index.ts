@@ -1,1 +1,1 @@
-export { PostsPage } from "./post.tsx";
+export { PostsPage } from "./posts.tsx";
