@@ -1,0 +1,1 @@
+export { fetchData } from "./fetch/index.ts";
