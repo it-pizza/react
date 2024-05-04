@@ -6,7 +6,7 @@ export function PostsPage() {
             <Header /> {/* Я только в конце понял что не правильно собрал header */}
             <main>
                 <section className="posts">
-                    
+
                 </section>
             </main>
         </>

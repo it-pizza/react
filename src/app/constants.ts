@@ -1,1 +1,1 @@
-const PostsFetchUrl: string = "https://studapi.teachmeskills.by"
+export const PostsFetchUrl: string = "https://studapi.teachmeskills.by"
