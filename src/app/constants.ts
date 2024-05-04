@@ -1,0 +1,1 @@
+const PostsFetchUrl: string = "https://studapi.teachmeskills.by"
