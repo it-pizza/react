@@ -1,8 +1,9 @@
 @import '../../app/index.scss';
 
 .header {
-    display: flex;
-    height: 45px;
+    display: grid;
+    grid-template-columns: 45px auto max-content;
+    grid-template-rows: 45px;
     position: sticky;
     background-color: $header-background;
 }

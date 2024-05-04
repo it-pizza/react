@@ -1,9 +1,7 @@
 @import '../../app/index.scss';
 
 .header__burger {
-    width: 45px;
-    height: 45px;
-    margin-right: 200px; // временно
+    grid-column: 1 / 2;
 
     #header__burger-checkbox {
         display: none;

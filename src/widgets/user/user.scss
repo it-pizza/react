@@ -1,0 +1,16 @@
+.header__user {
+    grid-column: 3 / 4;
+    display: flex;
+
+    .header__user-logo {
+        width: 45px;
+        height: 45px;
+    }
+
+    .header__user-name {
+        display: flex;
+        align-items: center;
+        height: 45px;
+        padding: 0 10px;
+    }
+}
