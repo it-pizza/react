@@ -3,6 +3,7 @@ import { fetchData } from "../../shared/index.ts"
 import { PostsFetchUrl } from "../../app/constants.ts"
 import { PostContext } from "./context.tsx"
 import { PostContent } from "./content.tsx"
+import { PostControl } from "../../features/post-control/post-control.tsx"
 
 export interface IPostFetchData {
     "id": 0,
@@ -26,6 +27,7 @@ function LargePost(props: IPostData) {
             <div className="post-large">
                 <img src={props.data.image} alt="" />
                 <PostContent />
+                <PostControl />
             </div>
         </PostContext>
     )
