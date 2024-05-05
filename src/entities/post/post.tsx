@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { fetchData } from "../../shared/index.ts"
 import { PostsFetchUrl } from "../../app/constants.ts"
 import { PostContext } from "./context.tsx"
+import { PostContent } from "./content.tsx"
 
 export interface IPostFetchData {
     "id": 0,
@@ -24,6 +25,7 @@ function LargePost(props: IPostData) {
         <PostContext value={props.data}>
             <div className="post-large">
                 <img src={props.data.image} alt="" />
+                <PostContent />
             </div>
         </PostContext>
     )
@@ -35,6 +37,7 @@ function MediumPost(props: IPostData) {
         <PostContext value={props.data}>
             <div className="post-large">
                 <img src={props.data.image} alt="" />
+                <PostContent />
             </div>
         </PostContext>
     )
@@ -46,6 +49,7 @@ function SmallPost(props: IPostData) {
         <PostContext value={props.data}>
             <div className="post-large">
                 <img src={props.data.image} alt="" />
+                <PostContent />
             </div>
         </PostContext>
     )
