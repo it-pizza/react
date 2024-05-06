@@ -4,16 +4,18 @@ import { PostsFetchUrl } from "../../app/constants.ts"
 import { PostContext } from "./context.tsx"
 import { PostContent } from "./content.tsx"
 import { PostControl } from "../../features/post-control/post-control.tsx"
+import "./post.scss"
+import { PostImage } from "./image.tsx"
 
 export interface IPostFetchData {
-    "id": 0,
-    "image": "string",
-    "text": "string",
-    "date": "2024-05-04",
-    "lesson_num": 0,
-    "title": "string",
-    "description": "string",
-    "author": 0
+    id: number,
+    image: string,
+    text: string,
+    date: number,
+    lesson_num: number,
+    title: string,
+    description: string,
+    author: number
   }
 
 interface IPostData {
@@ -25,7 +27,7 @@ function LargePost(props: IPostData) {
     return (
         <PostContext value={props.data}>
             <div className="post-large">
-                <img src={props.data.image} alt="" />
+                <PostImage />
                 <PostContent />
                 <PostControl />
             </div>
@@ -37,9 +39,10 @@ function MediumPost(props: IPostData) {
     if (!props.data) {return}
     return (
         <PostContext value={props.data}>
-            <div className="post-large">
-                <img src={props.data.image} alt="" />
+            <div className="post-medium">
+                <PostImage />
                 <PostContent />
+                <PostControl />
             </div>
         </PostContext>
     )
@@ -49,9 +52,10 @@ function SmallPost(props: IPostData) {
     if (!props.data) {return}
     return (
         <PostContext value={props.data}>
-            <div className="post-large">
-                <img src={props.data.image} alt="" />
+            <div className="post-small">
+                <PostImage />
                 <PostContent />
+                <PostControl />
             </div>
         </PostContext>
     )

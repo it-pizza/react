@@ -1,3 +1,41 @@
 // Header style
+
 $header-background: #0066ff;
 $header-burger-line: black;
+
+// Posts style
+
+$post-border-color: black;
+$post-background-color: #00000010;
+
+// Posts size
+
+$post-sizes: (
+    large: (width: 660px, height: 240px),
+    medium: (width: 660px, height: 240px),
+    small: (width: 660px, height: 240px)
+);
+
+// Post picture container size
+
+$post-image-sizes: (
+    large: (width: 340px, height: 200px),
+    medium: (width: 340px, height: 200px),
+    small: (width: 340px, height: 200px)
+);
+
+// Post content sizes
+
+$post-content-sizes: (
+    large: (width: 290px, height: 159px),
+    medium: (width: 290px, height: 159px),
+    small: (width: 290px, height: 159px)
+);
+
+// Post control button size
+
+%post-button-size {
+    background-size: 20px;
+    width: 20px;
+    height: 20px;
+}
