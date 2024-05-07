@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
-import { LoginPage, PostsPage } from '../../pages/index.ts';
+import { LoginPage, PostsPage, SuccessPage } from '../../pages/index.ts';
 
 
 export function App() {
@@ -7,6 +7,7 @@ export function App() {
         <Routes>
             <Route path='/posts' element={<PostsPage />}/>
             <Route path='/login' element={<LoginPage />}/>
+            <Route path='/success' element={<SuccessPage />} />
         </Routes>
     )
 }
