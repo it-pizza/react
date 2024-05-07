@@ -1,4 +1,3 @@
-import { useRef } from "react"
 import { ILogin } from "../../widgets/index.ts"
 
 interface ILoginInput {
@@ -8,8 +7,6 @@ interface ILoginInput {
 }
 
 export function LoginInput(props: ILoginInput) {
-    const inputRef = useRef<HTMLInputElement>(null)
-
     function setValue(event: React.ChangeEvent<HTMLInputElement>) {
         props.setValue(
             {
