@@ -1,5 +1,6 @@
 import { useRef, useState} from "react";
 import { LoginInput } from "../../features";
+import "./login.scss"
 
 export interface ILogin {
     email?: string
@@ -17,8 +18,10 @@ export function LoginForm() {
 
     return (
         <form ref={formRef} className="login__form" onSubmit={(event) => FormSubmitData(event)}>
-                <LoginInput name="email" setValue={setUseLogin} value={useLogin} />
-                <LoginInput name="password" setValue={setUseLogin} value={useLogin} />
+            <h1 className="form__title">Login:</h1>
+            <hr></hr>
+            <LoginInput name="email" setValue={setUseLogin} value={useLogin} />
+            <LoginInput name="password" setValue={setUseLogin} value={useLogin} />
             <button type="submit">Submit</button>
         </form>
     )
